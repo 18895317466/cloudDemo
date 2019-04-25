@@ -22,7 +22,7 @@ public class IndexController {
     @RequestMapping("/hi")
     public String hi(@RequestParam String name)
     {
-        return "produce " + name + ", port:" + port;
+        return "produce1 " + name + ",port:" + port;
     }
 
 }

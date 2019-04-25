@@ -4,8 +4,13 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+#开启路由 打开对Hystrix断路由
+feign:
+  hystrix:
+    enabled: false
 server:
   port: 8764
 spring:
   application:
     name: cloud-feign
+

@@ -11,7 +11,7 @@
 	<groupId>com.cloud</groupId>
 	<artifactId>cloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cloud-producer</name>
+	<name>cloud-producer1</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

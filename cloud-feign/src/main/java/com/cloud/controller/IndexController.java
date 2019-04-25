@@ -1,7 +1,6 @@
 package com.cloud.controller;
 
 import com.cloud.client.IndexClient;
-import com.cloud.services.IndexService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     private Logger logger = LoggerFactory.getLogger(IndexController.class);
-//    @Autowired
-//    private IndexService indexService;
+
     @Autowired
     private IndexClient indexClient;
 
-//    @RequestMapping(value = "/hi")
-//    public String hi(@RequestParam String name)
-//    {
-//        return indexService.hiService(name);
-//    }
 
     @RequestMapping(value = "/hello")
-    public String hello(@RequestParam String name)
-    {
+    public String hello(@RequestParam String name) {
+        logger.info("\n\t feign api : hello/"+ name);
         return indexClient.hi(name);
     }
 
