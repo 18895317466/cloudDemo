@@ -7,3 +7,15 @@ server:
 spring:
   application:
     name: cloud-producer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://140.143.36.160:3306/cloud?useUnicode&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    default-auto-commit: false
+    max-active: 100
+    initial-size: 1
+    max-wait: 60000
+    min-idle: 1
+    max-idle: 25
+

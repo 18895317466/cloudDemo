@@ -21,11 +21,10 @@ public class IndexService {
 
 
     @HystrixCommand(fallbackMethod = "hiError")
-    public String hiService(String name)
-    {
+    public String hiService(String name) {
+        // VIP virtual IP
         return restTemplate.getForObject("http://CLOUD-PRODUCER/hi?name=" + name, String.class);
-//        Object forObject = restTemplate.getForObject("http://CLOUD-PRODUCER/hi?name=" + name, Object.class);
-//        return forObject.toString();
+
     }
 
 }
