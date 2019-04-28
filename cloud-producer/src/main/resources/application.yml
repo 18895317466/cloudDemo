@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://152.136.69.7:8761/eureka/,http://140.143.36.160:8761/eureka/
 server:
   port: 8762
 spring:
@@ -19,3 +19,6 @@ spring:
     min-idle: 1
     max-idle: 25
 
+management:
+  security :
+    enabled : false

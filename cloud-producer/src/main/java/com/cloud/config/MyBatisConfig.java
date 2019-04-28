@@ -25,7 +25,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
     @Autowired
     private DbConfig dbConfig;
 
-    @Bean(name = "spring.dataSource")
+    @Bean(name = "spring.datasource")
     public BasicDataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(dbConfig.getDriverClassName());
@@ -51,9 +51,9 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
         bean.setDataSource(dataSource());
         bean.setTypeAliases(new Class[]{
         });
-        bean.setConfigLocation(new ClassPathResource("com/cloud/config/sqlmap.xml"));
+        //bean.setConfigLocation(new ClassPathResource("com/cloud/config/sqlmap.xml"));
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        bean.setMapperLocations(resolver.getResources("classpath:com/cloud/dao/mapper/*Mapper.xml"));
+        bean.setMapperLocations(resolver.getResources("classpath:mapper/*Mapper.xml"));
         return bean.getObject();
     }
 

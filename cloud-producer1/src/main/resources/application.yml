@@ -1,9 +1,29 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://152.136.69.7:8761/eureka/,http://140.143.36.160:8761/eureka/
+    #应用程序会将健康状态传播到Eureka Server
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+    #自定义的元数据 key/value 都可以随便写
+      my-metadata: 我定义的元数据
+
 server:
   port: 8763
 spring:
   application:
     name: cloud-producer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://140.143.36.160:3306/cloud?useUnicode&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    default-auto-commit: false
+    max-active: 100
+    initial-size: 1
+    max-wait: 60000
+    min-idle: 1
+    max-idle: 25

@@ -13,11 +13,11 @@ import java.util.List;
 @Component
 public class UserInfoService {
 
-//    @Autowired
-//    private UserInfoMapper userInfoMapper;
+    @Autowired
+    private UserInfoMapper userInfoMapper;
 
-//    public List<UserInfo> list(){
-//        return userInfoMapper.find();
-//    }
+    public List<UserInfo> list(){
+        return userInfoMapper.find();
+    }
 
 }

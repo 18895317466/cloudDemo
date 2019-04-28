@@ -23,17 +23,17 @@ public class IndexController {
     @Value("${server.port}")
     String port;
 
-//    @Autowired
-//    private UserInfoService userInfoService;
+    @Autowired
+    private UserInfoService userInfoService;
 
     @RequestMapping("/hi")
     public String hi(@RequestParam String name) {
         return "produce " + name + ", port:" + port;
     }
 
-//    @RequestMapping("/list")
-//    public String list() {
-//        return JSONObject.toJSONString(userInfoService.list());
-//    }
+    @RequestMapping("/list")
+    public String list() {
+        return JSONObject.toJSONString(userInfoService.list());
+    }
 
 }

@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://152.136.69.7:8761/eureka/,http://140.143.36.160:8761/eureka/
   instance:
     prefer-ip-address: true
 #开启路由 打开对Hystrix断路由
