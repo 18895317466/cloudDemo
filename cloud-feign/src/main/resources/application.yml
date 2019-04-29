@@ -8,9 +8,18 @@ eureka:
 feign:
   hystrix:
     enabled: false
+  client:
+    config:
+      CLOUD-PRODUCER:
+        loggerLevel: full
+      CLOUD-PRODUCER-MOVICES:
+        loggerLevel: full
 server:
   port: 8764
 spring:
   application:
     name: cloud-feign
+logging:
+  level:
+    com.cloud.client.indexClient: debug
 
